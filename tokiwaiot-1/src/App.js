@@ -33,7 +33,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Login with Google</h1>
-        <a href="http://localhost:5000/auth/google/callback">Login</a>
+        <a href="http://ec2-57-181-20-73.ap-northeast-1.compute.amazonaws.com:5000/auth/google/callback">Login</a>
       </header>
     </div>
   );

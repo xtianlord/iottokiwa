@@ -8,7 +8,7 @@ const app = express();
 // Replace these values with your own
 const GOOGLE_CLIENT_ID = '1054886195040-n6ql0tqachlkie7p6jdon1hgjn274a3q.apps.googleusercontent.com';
 const GOOGLE_CLIENT_SECRET = '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';
-const CALLBACK_URL = 'http://localhost:5000/auth/google/callback';
+const CALLBACK_URL = 'http://ec2-57-181-20-73.ap-northeast-1.compute.amazonaws.com:5000/auth/google/callback';
 
 passport.use(new GoogleStrategy({
   clientID: GOOGLE_CLIENT_ID,
@@ -16,7 +16,7 @@ passport.use(new GoogleStrategy({
   callbackURL: CALLBACK_URL
 }, (accessToken, refreshToken, profile, done) => {
   // Verify if the user's email domain is from your organization
-  const allowedDomain = 'your-organization-domain.com'; // Replace with your organization's domain
+  const allowedDomain = 'tokiwa-corp.com'; // Replace with your organization's domain
   const userEmailDomain = profile.emails[0].value.split('@')[1];
 
   if (userEmailDomain === allowedDomain) {
