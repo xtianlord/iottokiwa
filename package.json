@@ -7,6 +7,7 @@
     "node": "21.5.0",
     "nvm": "0.39.0"
   },
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
